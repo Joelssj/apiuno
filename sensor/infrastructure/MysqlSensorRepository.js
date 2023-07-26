@@ -44,7 +44,7 @@ class MysqlSensorRepository {
     }
     createSensor(pulso_cardiaco, temperatura) {
         return __awaiter(this, void 0, void 0, function* () {
-            const sql = "INSERT INTO sensor (pulso_cardiaco, temperatura) VALUES (?, ?, ?)";
+            const sql = "INSERT INTO sensor (pulso_cardiaco, temperatura) VALUES (?, ?)";
             const params = [pulso_cardiaco, temperatura];
             try {
                 const [result] = yield (0, mysql_1.query)(sql, params);
